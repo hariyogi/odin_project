@@ -1,0 +1,87 @@
+/* Reset Method */
+
+.nav-kanan {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    background-color: #b0fbba6b;
+}
+
+.logo-kiri {
+    padding: 4px;
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+}
+
+.nav-kanan ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-kanan li{
+    display: block;
+    float: right;
+    margin-right: 16px;
+    margin-top: 20px;
+    align-items: center;
+    height: 32px;
+}
+
+.logo-tengah {
+    position: absolute;
+    top: 311px;
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+}
+
+.center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+button {
+    position: absolute;
+    right: 50%;
+    top: 290px;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px; 
+}
+
+input.src {
+    width: 350px;
+    padding: 8px;
+    border: gray 2px solid;
+    border-radius: 10px;
+}
+
+input.sub {
+    width: 200px;
+    padding: 8px;
+    border: transparent;
+    border-radius: 20px;
+}
+
+input.sub:hover {
+    background-color: pink;
+}
+
+p {
+    text-align: center;
+}
+
+
