@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFE53B;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+h1, p, h2 {
+    text-align: center;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black;
+    margin-top: 75px;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+.container {
+    position: absolute;
+    height: 400px;
+    width: 600px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score {
+    margin: 0 30% 0 30%;
+}
+
+.inputError {
+    border: 1px solid red;
+}
+
+button {
+    border: 0;
+    color: white;
+    padding: 8px;
+}
+
+button.btn_score{
+    height: 41px;
+    width: 128px;
+    margin: 8px auto 0 auto;
+    background-color: #37b537;
+}
+
+button.btn_score:hover{
+    border: 2px solid #068006;
+}
+
+button.btn_score:active{
+    background-color: #068006;
+}
+
+p#crntScore {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+button.gunting {
+    background-color: #df2d44;
+}
+
+button.batu {
+    background-color: #4925c9;
+}
+
+button.kertas {
+    background-color: #dd406fec;
+}
+
+button.gunting:active {
+    background-color: #5f151f;
+}
+
+button.batu:active {
+    background-color: #1b0e49;
+}
+
+button.kertas:active {
+    background-color: #5a1b2eec;
+}
+
