@@ -1,2 +1,2 @@
-# odin_project
-Kumpulan dari odin project
+# ODIN PROJECT EXCERCISES
+Ini merupakan kumpulan latihan dari Odin Project (https://www.theodinproject.com)
