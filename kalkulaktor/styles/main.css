@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    font-size:  1.2em;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "desk main";
+    grid-column-gap: 1em;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box-test{
+    border: 1px solid red;
+}
+
+/* Side Nav */
+.deskripsi{
+    grid-area: desk;
+    padding: 8px;
+    height: 100%;
+    background-color: white;
+}
+
+.deskripsi .judul{
+    text-align: center;
+}
+
+.judul h1{
+    font-size: 3em;
+}
+
+.desk {
+    margin-top: 16px;
+}
+
+.desk h2 {
+    font-size: 2em;
+}
+
+.desk p {
+    margin-left: 14px;
+}
+
+/* Main */
+.main{
+    align-self: center;
+    justify-self: center;
+    grid-area: main;
+}
+
+.cal-container {
+    display: grid;
+    grid-template: repeat(7, 60px) / repeat(4, 60px);
+}
+
+.history-dsply, .hasil-dsply {
+    padding: 4px;
+}
+
+#dsply {
+    grid-area: 1 / 1 / span 2 / span 4;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+#dsply p{
+    margin: 4px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.special-key, .number-key {
+    border: 1px solid #cac7c7;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.special-key {
+    background-color: #e8e2e2;
+}
+
+.number-key {
+    background-color: white;
+}
+
+#clear {
+    grid-area: 3 / 1;
+}
+
+#backspace {
+    grid-area: 3 / 2;
+}
+
+#percent {
+    grid-area : 3 / 3;
+}
+
+#bagi {
+    grid-area: 3 / 4;
+}
+
+#kali {
+    grid-area: 4 / 4;
+}
+
+#kurang {
+    grid-area: 5 / 4;
+}
+
+#tambah {
+    grid-area: 6 / 4;
+}
+
+#jumlah {
+    grid-area : 7 / 4;
+}
+
+#sembilan {
+    grid-area: 4 / 3;
+}
+
+#delapan {
+    grid-area: 4 / 2;
+}
+
+#tujuh {
+    grid-area: 4 / 1;
+}
+
+#enam {
+    grid-area: 5 / 3;
+}
+
+#lima {
+    grid-area: 5 / 2;
+}
+
+#empat {
+    grid-area: 5 / 1;
+}
+
+#tiga {
+    grid-area: 6 / 3;
+}
+
+#dua {
+    grid-area: 6 / 2;
+}
+
+#satu {
+    grid-area: 6 / 1;
+}
+
+#nol {
+    grid-area: 7 / 2;
+}
+
+#titik {
+    grid-area: 7 / 3;
+}
+
