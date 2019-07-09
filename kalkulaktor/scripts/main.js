@@ -38,7 +38,7 @@ window.addEventListener("keydown", e =>{
         case "Backspace":
         mulaiHitung("Del");
         break;
-        case "Enter": case "=":
+        case "=":
         mulaiHitung("=");
         break;
         default:
@@ -83,7 +83,12 @@ function doMath(assign, value1, value2){
         case "x":
             return Number(value1) * Number(value2);
         case "/":
-            return Number(value1) / Number(value2);
+            if(Number(value2) === 0){
+                alert("Mau coba bagi 0 ?");
+                return Number(value1);
+            }else {
+                return Number(value1) / Number(value2);
+            }
         case "+":
             return Number(value1) + Number(value2);
         case "-":
