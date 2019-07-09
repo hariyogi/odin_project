@@ -22,7 +22,7 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 100%;
     grid-template-areas: 
         "desk main";
@@ -79,16 +79,27 @@ p {
     padding: 4px;
 }
 
-#dsply {
-    grid-area: 1 / 1 / span 2 / span 4;
+#histori {
+    grid-area: 1 / 1 / span 1 / span 4;
     background-color: white;
     border-bottom: 1px solid black;
+    overflow: auto;
 }
 
-#dsply p{
+#dsply {
+    grid-area: 2 / 1 / span 1 / span 4;
+    background-color: white;
+    overflow: auto;
+}
+
+#dsply p, #histori p{
     margin: 4px;
     font-size: 2.5em;
     font-weight: bold;
+    overflow: auto;
+    text-align: end;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .special-key, .number-key {
@@ -107,6 +118,11 @@ p {
 
 .number-key {
     background-color: white;
+}
+
+.special-key:hover, .number-key:hover {
+    background-color: rgb(116, 170, 196);
+    color: white;
 }
 
 #clear {
@@ -183,5 +199,9 @@ p {
 
 #titik {
     grid-area: 7 / 3;
+}
+
+#kosong {
+    grid-area: 7 / 1;
 }
 
