@@ -5,7 +5,8 @@ let kalkulaktor = {
     lastNumber : null,
     reset : false,
 };
-// Input & output
+
+// Awal Input & output
 const display = document.querySelector("#dsply p");
 const histori = document.querySelector("#histori p");
 const button = document.querySelectorAll("button");
@@ -17,12 +18,44 @@ button.forEach(function(currentValue, currentIndex, listObj){
             kalkulaktor.reset = false;
         }
         mulaiHitung(e.target.innerText);
-        display.textContent = kalkulaktor.crntValue;
-        histori.textContent = (kalkulaktor.lastNumber === null) ? "" : kalkulaktor.lastNumber;
+        tampilkan();
     });
 });
 
+window.addEventListener("keydown", e =>{
+    if(kalkulaktor.reset){
+        reset();
+        kalkulaktor.reset = false;
+    }
+    switch(e.key){
+        case "1":case "2":case "3":case "4":case "5":case "6":case "7":
+        case "8":case "9":case "0":case "-":case "/":case "+":case ".":
+        mulaiHitung(e.key);
+        break;
+        case "*":
+        mulaiHitung("x");
+        break;
+        case "Backspace":
+        mulaiHitung("Del");
+        break;
+        case "Enter": case "=":
+        mulaiHitung("=");
+        break;
+        default:
+        return; // Tidak melakukan apapun
+    }
+    tampilkan();
+});
+
+// AKhir Input & output
+
+function tampilkan(){
+    display.textContent = kalkulaktor.crntValue;
+    histori.textContent = (kalkulaktor.lastNumber === null) ? "" : kalkulaktor.lastNumber;
+}
+
 function mulaiHitung(kode){
+    console.log(kode);
     switch(kode){
         case "C":
             reset();
@@ -31,7 +64,7 @@ function mulaiHitung(kode){
             kalkulaktor.crntValue = delLastChar(kalkulaktor.crntValue);
             break;
         case "x": case "/": case "+": case "-": case "=":case "x2":
-            setAssign(kode);
+            setOperator(kode);
             break;
         case ".": default:
             kalkulaktor.crntValue = appendNumber(kalkulaktor.crntValue, kode);       
@@ -72,8 +105,8 @@ function appendNumber(crntValue, kode){
     return (crntValue === "0") ? kode : crntValue += kode;
 }
 
-
-function setAssign(kode){
+// Jika simbol ditekan
+function setOperator(kode){
     if(kode !== "="){
         setAsign(kode);
     }else{
