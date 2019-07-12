@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1, p, h2, span{
+    text-align: center; 
+    color: white; 
+}
+
+button {
+    background: transparent;
+    border: 0;
+    padding: 8px;
+    color: white;
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: 10px;
+    text-shadow: 5px 3px 0 #043266;
+}
+
+p, span {
+    font-size: 1.4em;
+}
+
+h2 {
+    font-size : 2em;
+}
+
+body {
+    background: #606c88;
+    background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+    background: linear-gradient(to right, #2d78a2, #1b86c4);
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: grid;
+    grid-template: 10% 1fr / 1fr;
+    min-height: 100vh;
+}
+
+.box-test {
+    border: 1px solid red;
+}
+
+.head{
+    padding: 20px;
+    background: #2d78a2;
+    color: white;
+    grid-area: 1 / 1;
+}
+
+.main {
+    grid-area: 2 / 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.pomodoro {
+    width: 600px;
+    height: 400px;
+    background: #212326;
+    display: grid;
+    grid-template: repeat(2, 1fr) 3fr / repeat(4, 1fr);
+    align-items: center;
+    border: 2px solid #212326;
+    border-radius: 10px;
+}
+
+.sesion {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.break {
+    grid-area: 1 / span 2 / span 1 / span 2;
+}
+
+#play {
+    grid-area: 2 / 1;
+}
+
+#reset {
+    grid-area: 2 / 2;
+}
+
+#pause {
+    grid-area: 2 / 3;
+}
+
+#stop {
+    grid-area: 2 / 4;
+}
+
+#time {
+    grid-area: 3 / 1 / span 1 / span 4;
+    font-size: 11em;
+    color: white;
+    justify-self: center;
+}
+
+.content{
+    margin-top: 16px;
+}
+
+.content p {
+    font-size: 2.3em;
+    letter-spacing: 10px;
+    margin-top: 16px;
+}
+
+button:hover{
+    background-color: rgb(130, 24, 24);
+    cursor: pointer;
+}
+
+button:active{
+    background-color: rgb(72, 9, 9);
+}
+
+.item-test{
+    background-color: aqua;
+    border: 2px solid black;
+}
